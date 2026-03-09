@@ -1,19 +1,15 @@
-import type { Metadata } from 'next';
-import { ClerkProvider } from '@clerk/nextjs';
-import { dark } from '@clerk/themes';
-import './globals.css';
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'Skapa User Story - G\u00e9n\u00e9rateur IA de User Stories',
-  description: 'AI-powered user story generation and management',
+  title: "Skapa User Story - Générateur IA de User Stories",
+  description: "Plateforme de génération de user stories par IA",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <ClerkProvider appearance={{ baseTheme: dark }}>
-      <html lang="fr" className="dark">
-        <body className="bg-dark text-white antialiased">{children}</body>
-      </html>
-    </ClerkProvider>
+    <html lang="fr" className="dark">
+      <body className="bg-dark text-white antialiased">{children}</body>
+    </html>
   );
 }
